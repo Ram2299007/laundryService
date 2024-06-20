@@ -1,0 +1,19 @@
+# Dart build artifacts
+.dart_tool/
+build/
+
+# APK files
+*.apk
+
+# Dill files
+*.dill
+*.track.dill
+
+# Shared libraries
+*.so
+.dart_tool/
+build/
+*.apk
+*.dill
+*.track.dill
+*.so
