@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundryservice/screens/MainScreen.dart';
+import 'package:laundryservice/screens/SplashScreen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

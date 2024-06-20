@@ -312,7 +312,7 @@ class _HelpScreenState extends State<HelpScreen> {
                               child: ElevatedButton(
 
                                 onPressed: () {
-                                  Navigator.pushReplacement(context,
+                                  Navigator.push(context,
                                       MaterialPageRoute(builder: (context) => const HelpScreen2()));
 
                                 },
