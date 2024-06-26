@@ -941,16 +941,9 @@ class _MainscreenState extends State<Mainscreen> {
                     width: 80, // Set the desired width
                     height: 4, // Set the desired height
                     alignment: Alignment.center,
-                    child: Transform.scale(
-                      scale: 0.8,
-                      // Adjust this value to change the size of the Switch
-                      child: Switch(
-                        value: false,
-                        onChanged: (value) {
-                          // Handle switch toggle
-                        },
-                      ),
-                    ),
+                    child:
+                    isSwitched(),
+
                   ),
                 ]),
               ),
@@ -1125,6 +1118,9 @@ class _MainscreenState extends State<Mainscreen> {
   }
 }
 
+bool _isSwitched = false;
+
+
 class DropdownMenuExample extends StatefulWidget {
   const DropdownMenuExample({super.key});
 
@@ -1148,6 +1144,48 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
       dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
         return DropdownMenuEntry<String>(value: value, label: value);
       }).toList(),
+    );
+  }
+}
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: isSwitched(),
+    );
+  }
+}
+
+class isSwitched extends StatefulWidget {
+  @override
+  _isSwitchedState createState() => _isSwitchedState();
+}
+
+class _isSwitchedState extends State<isSwitched> {
+  bool _isSwitched = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child:
+        Switch(
+          value: _isSwitched,
+          onChanged: (value) {
+            setState(() {
+              _isSwitched = value;
+            });
+          },
+          activeColor: Color.fromRGBO(251, 253, 255, 1), // Color of the thumb when the switch is on
+          activeTrackColor: Color.fromRGBO(169, 169, 169, 1), // Color of the track when the switch is on
+          inactiveThumbColor: Color.fromRGBO(251, 253, 255, 1), // Color of the thumb when the switch is off
+          inactiveTrackColor: Color.fromRGBO(169, 169, 169, 1), // Color of the track when the switch is off
+        ),
+
+      ),
     );
   }
 }

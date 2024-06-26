@@ -108,7 +108,7 @@ class _HelpScreen2State extends State<HelpScreen2> {
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   minimumSize: Size(233, 40),
-                                  backgroundColor: Colors.blue,
+                                  backgroundColor: Color.fromRGBO(32, 129, 239, 1),
 
                                 ),
                                 child: Text(
@@ -116,8 +116,9 @@ class _HelpScreen2State extends State<HelpScreen2> {
                                   style: GoogleFonts.poppins(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
-                                      color: Colors.white
-                                    // Set text color to white here
+                                      color: Color.fromRGBO(251, 254, 255, 1)
+
+                                  // Set text color to white here
                                   ),
                                 ),
                               ),

@@ -23,13 +23,26 @@ class _TrackYourOrderState extends State<TrackYourOrder> {
          child: Center(
            child: Column(
              children: [
-           
+
                SizedBox(height: 40),
                SizedBox(
-                 width: 400, // full width of the parent
-                 height: 441, // height of the map
-                 child:  GoogleMap(initialCameraPosition: initialPosition,
-                   mapType: MapType.normal)
+                   width: 393, // full width of the parent
+                   height: 456, // height of the map
+                   child:  Stack(
+                       children: [GoogleMap(initialCameraPosition: initialPosition,
+                           mapType: MapType.normal),
+
+                         Positioned(
+                           top: 8,
+                           left: 330,
+                           child:
+                           Image.asset(
+                             'assets/refres.png', // Path to your image
+                             width: 40, // Specify the width of the image
+                             height: 40, // Specify the height of the image
+                           ),
+
+                         )])
                ),
 
                Column(
