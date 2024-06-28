@@ -27,186 +27,202 @@ class _MainscreenState extends State<Mainscreen> {
     (context) => SafeArea(
             child: SingleChildScrollView(
                 child: Center(
-                    child: Container(
-          decoration: BoxDecoration(
-            color: Color.fromRGBO(197, 227, 255, 1),
-          ),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
+                    child: Column(
                       children: [
-                        const Image(
-                          image: AssetImage("assets/location_on.png"),
-                          width: 16,
-                          height: 21,
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text("Viman Nagar, Pune",
-                            style: GoogleFonts.poppins(
-                                textStyle: const TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15))),
-                        const SizedBox(
-                          width: 20,
-                        ),
                         Container(
-                          width: 118,
-                          height: 31,
-                          decoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(4.0)),
-                              color: Color.fromRGBO(251, 253, 255, 0.5)),
-                          child: Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: Row(children: [
-                              const SizedBox(
-                                width: 5,
-                              ),
-                              Image(
-                                image: AssetImage("assets/lan.png"),
-                                width: 16,
-                                height: 16,
-                              ),
-                              const VerticalDivider(
-                                  color: Color.fromRGBO(220, 222, 224, 1),
-                                  thickness: 1),
-                              Text(
-                                "English",
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(197, 227, 255, 1),
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                                        child: Column(
+                                          children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            const Image(
+                              image: AssetImage("assets/location_on.png"),
+                              width: 16,
+                              height: 21,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Text("Viman Nagar, Pune",
                                 style: GoogleFonts.poppins(
                                     textStyle: const TextStyle(
-                                        fontSize: 13, color: Colors.black)),
-                              ),
-                              // todo rgba(220, 222, 224, 1)
-                              const VerticalDivider(
-                                  color: Color.fromRGBO(220, 222, 224, 1),
-                                  thickness: 1),
-                              const Image(
-                                image: AssetImage("assets/down_arrow.png"),
-                                width: 12,
-                                height: 12,
-                              ),
-                            ]),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        InkWell(
-                          child: Container(
-                            decoration: const BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(4.0)),
-                                color: Color.fromRGBO(251, 253, 255, 0.5)),
-                            child: const Padding(
-                                padding: EdgeInsets.all(2.0),
-                                child: Image(
-                                  image: AssetImage("assets/notifications.png"),
-                                  width: 24,
-                                  height: 24,
-                                )),
-                          ),
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const Notifications()));
-                          },
-                        ),
-                      ],
-                    ),
-
-                    SizedBox(
-                      height: 23,
-                    ),
-                    SizedBox(
-                      height: 38,
-                      child: Container(
-                        // Container with border
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                              color: Color.fromRGBO(2, 2, 2, 0.4), width: 1.0),
-                          // Border properties
-                          borderRadius:
-                              BorderRadius.circular(8.0), // Rounded corners
-                        ),
-
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              // Container for flag and code
-                              width: 50, // Adjust width as needed
-                              child: Row(
-                                // Inner row for flag and code
-                                children: [
-                                  const SizedBox(width: 15),
-                                  Image.asset(
-                                    "assets/search.png",
-                                    // Replace with your flag image path
-                                    width: 18,
-                                    height: 18,
-                                  ),
-                                ],
-                              ),
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 15))),
+                            const SizedBox(
+                              width: 20,
                             ),
-                            Expanded(
-                              // Text field takes remaining space
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  hintText: "Search",
-                                  hintStyle: GoogleFonts.poppins(
-                                      fontSize: 17,
-                                      color:
-                                          const Color.fromRGBO(2, 2, 2, 0.4)),
-                                  focusedBorder: InputBorder.none,
-                                  enabledBorder: InputBorder.none,
-                                ),
-                                style: GoogleFonts.poppins(
-                                    textStyle: const TextStyle(fontSize: 16)),
-                                keyboardType: TextInputType.phone,
+                            Container(
+                              width: 118,
+                              height: 31,
+                              decoration: const BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(4.0)),
+                                  color: Color.fromRGBO(251, 253, 255, 0.5)),
+                              child: Padding(
+                                padding: const EdgeInsets.all(2.0),
+                                child: Row(children: [
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Image(
+                                    image: AssetImage("assets/lan.png"),
+                                    width: 16,
+                                    height: 16,
+                                  ),
+                                  const VerticalDivider(
+                                      color: Color.fromRGBO(220, 222, 224, 1),
+                                      thickness: 1),
+                                  Text(
+                                    "English",
+                                    style: GoogleFonts.poppins(
+                                        textStyle: const TextStyle(
+                                            fontSize: 13, color: Colors.black)),
+                                  ),
+                                  // todo rgba(220, 222, 224, 1)
+                                  const VerticalDivider(
+                                      color: Color.fromRGBO(220, 222, 224, 1),
+                                      thickness: 1),
+                                  const Image(
+                                    image: AssetImage("assets/down_arrow.png"),
+                                    width: 12,
+                                    height: 12,
+                                  ),
+                                ]),
                               ),
                             ),
                             SizedBox(
-                              // Container for flag and code
-                              width: 50, // Adjust width as needed
-                              child: Row(
-                                // Inner row for flag and code
-                                children: [
-                                  const SizedBox(width: 10),
-                                  Image.asset(
-                                    "assets/keyboard_voice.png",
-                                    // Replace with your flag image path
-                                    width: 24,
-                                    height: 24,
-                                  ),
-                                ],
+                              width: 10,
+                            ),
+                            InkWell(
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(4.0)),
+                                    color: Color.fromRGBO(251, 253, 255, 0.5)),
+                                child: const Padding(
+                                    padding: EdgeInsets.all(2.0),
+                                    child: Image(
+                                      image: AssetImage("assets/notifications.png"),
+                                      width: 24,
+                                      height: 24,
+                                    )),
                               ),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const Notifications()));
+                              },
                             ),
                           ],
                         ),
-                      ),
-                    ),
 
-                    SizedBox(
-                      height: 23,
-                    ),
-                    //todo  here we need to add viewpager
-                  ],
-                ),
-              )
-            ],
-          ),
-        )))),
+                        SizedBox(
+                          height: 23,
+                        ),
+                        SizedBox(
+                          height: 38,
+                          child: Container(
+                            // Container with border
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: Color.fromRGBO(2, 2, 2, 0.4), width: 1.0),
+                              // Border properties
+                              borderRadius:
+                                  BorderRadius.circular(8.0), // Rounded corners
+                            ),
+
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  // Container for flag and code
+                                  width: 50, // Adjust width as needed
+                                  child: Row(
+                                    // Inner row for flag and code
+                                    children: [
+                                      const SizedBox(width: 15),
+                                      Image.asset(
+                                        "assets/search.png",
+                                        // Replace with your flag image path
+                                        width: 18,
+                                        height: 18,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  // Text field takes remaining space
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      hintText: "Search",
+                                      hintStyle: GoogleFonts.poppins(
+                                          fontSize: 17,
+                                          color:
+                                              const Color.fromRGBO(2, 2, 2, 0.4)),
+                                      focusedBorder: InputBorder.none,
+                                      enabledBorder: InputBorder.none,
+                                    ),
+                                    style: GoogleFonts.poppins(
+                                        textStyle: const TextStyle(fontSize: 16)),
+                                    keyboardType: TextInputType.phone,
+                                  ),
+                                ),
+                                SizedBox(
+                                  // Container for flag and code
+                                  width: 50, // Adjust width as needed
+                                  child: Row(
+                                    // Inner row for flag and code
+                                    children: [
+                                      const SizedBox(width: 10),
+                                      Image.asset(
+                                        "assets/keyboard_voice.png",
+                                        // Replace with your flag image path
+                                        width: 24,
+                                        height: 24,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 23,
+                        ),
+                        //todo  here we need to add viewpager
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                        SizedBox(height: 20),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+
+                                
+                                
+                            ],)
+
+
+                          ],)
+                      ],
+                    )))),
 
     // todo order screen
     (context) => SafeArea(

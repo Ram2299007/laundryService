@@ -35,7 +35,8 @@ dependencies:
   google_maps_flutter: ^2.7.0
   flutter_rating_bar: ^4.0.0
   table_calendar: ^3.0.2
-
+  cloud_firestore: ^4.3.3
+  carousel_slider: ^4.0.0
 
   flutter:
     sdk: flutter
